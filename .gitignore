@@ -1,0 +1,10 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# VSCode
+.vscode/
+# Mypy
+.mypy_cache/
