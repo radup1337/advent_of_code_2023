@@ -3,7 +3,9 @@
 __pycache__/
 *.pyo
 *.pyd
-
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb
 # VSCode
 .vscode/
 # Mypy
