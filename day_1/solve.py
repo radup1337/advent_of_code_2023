@@ -8,7 +8,7 @@ class SolutionPart1(BaseSolution):
         total: int = 0
         for line in inputs:
             all_ints: list[str] = [char for char in line.strip() if char.isdigit()]
-            joint_number = int(all_ints[0] + all_ints[-1])
+            joint_number: int = int(all_ints[0] + all_ints[-1])
             total += joint_number
         return total
 
@@ -16,7 +16,7 @@ class SolutionPart1(BaseSolution):
 class SolutionPart2(BaseSolution):
     def __init__(self, current_path: str, part: int, test_solution: str) -> None:
         super().__init__(current_path, part, test_solution)
-        self.word_to_int = {
+        self.word_to_int: dict[str, str] = {
             "one": "1",
             "two": "2",
             "three": "3",
@@ -31,13 +31,13 @@ class SolutionPart2(BaseSolution):
     def solve(self, inputs: list[str]) -> int:
         total: int = 0
         for line in inputs:
-            number = self.find_numbers(line.strip())
+            number: int = self.find_numbers(line.strip())
             total += int(number)
         return total
 
     def find_numbers(self, line: str) -> int:
-        first_number = self.search(line, 1)
-        last_number = self.search(line[::-1], -1)
+        first_number: str | None = self.search(line, 1)
+        last_number: str | None = self.search(line[::-1], -1)
         assert first_number and last_number
         return int(first_number + last_number)
 
