@@ -14,8 +14,8 @@ class SolutionPart1(BaseSolution):
 
 
 class SolutionPart2(BaseSolution):
-    def __init__(self, current_path: str, part: int, test_solution: str) -> None:
-        super().__init__(current_path, part, test_solution)
+    def __init__(self, current_path: str, part: int) -> None:
+        super().__init__(current_path, part)
         self.word_to_int: dict[str, str] = {
             "one": "1",
             "two": "2",
@@ -58,10 +58,10 @@ class SolutionPart2(BaseSolution):
 if __name__ == "__main__":
     path = os.path.abspath(__file__)
     # ---------------------------------- Part 1 ---------------------------------- #
-    part1 = SolutionPart1(current_path=path, part=1, test_solution="142")
+    part1 = SolutionPart1(current_path=path, part=1)
     part1.test()
     part1.get_solution()
     # ---------------------------------- Part 2 ---------------------------------- #
-    part2 = SolutionPart2(current_path=path, part=2, test_solution="281")
+    part2 = SolutionPart2(current_path=path, part=2)
     part2.test()
     part2.get_solution()
